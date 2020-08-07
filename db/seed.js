@@ -1,5 +1,5 @@
 const db =  require('./index.js');
-const random = require('./infoGeneration.js')
+const random = require('./infoGeneration.js');
 
 const insertInfo = () => {
   // console.log(`${placeName},${rating},${host},${location}`)

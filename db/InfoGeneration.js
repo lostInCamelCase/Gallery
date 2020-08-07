@@ -36,6 +36,13 @@ module.exports = {
   randomLocation: () => {
     var location = locations[module.exports.randomIdx(locations)];
     return location;
+  },
+
+  randomPictures: () => {
+
+
+
+
   }
 }
 
