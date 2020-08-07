@@ -9,8 +9,6 @@ CREATE TABLE placeToStay
 (
   id int AUTO_INCREMENT NOT NULL,
   placeName varchar (255) NOT NULL,
-  rating INT NOT NULL,
-  superHost varchar (255) NOT NULL,
   location varchar (255) NOT NULL,
   PRIMARY KEY (id)
 );
@@ -33,6 +31,7 @@ CREATE TABLE ratings
   number_Of_Reviews INT NOT NULL,
   stars INT NOT NULL,
   stay_id INT NOT NULL,
+  superHost varchar (255) NOT NULL,
   PRIMARY KEY(id),
   FOREIGN KEY (stay_id) REFERENCES placeToStay(id)
 );

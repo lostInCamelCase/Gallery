@@ -14,4 +14,4 @@ connection.connect( (err) => {
   }
 })
 
-module.exports.connection = connection;
+module.exports = connection;
