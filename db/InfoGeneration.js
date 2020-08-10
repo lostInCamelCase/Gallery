@@ -45,4 +45,4 @@ module.exports = {
     const caption = captions[module.exports.randomIdx(captions)];
     return caption;
   },
-
+}
