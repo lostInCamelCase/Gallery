@@ -5,7 +5,7 @@ var Component2 = (props) => {
 
   return (
     <div>
-    Hello from Component2
+    Hello from Component2 with updated packages
     </div>
   )
 

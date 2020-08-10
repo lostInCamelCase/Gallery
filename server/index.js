@@ -47,3 +47,4 @@ app.get('/stay/pictures', (req, res) => {
 });
 // Start the server on the provided port
 app.listen(PORT, () => console.log(`Listening on port: ${PORT}`));
+
