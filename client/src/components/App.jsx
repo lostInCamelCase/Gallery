@@ -1,18 +1,31 @@
 import React from 'react';
-import Component1 from './Component1.jsx';
+import PictureList from './PictureList.jsx';
+import axios from 'axios';
+
 
 class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      pictures: []
+      pictures: [],
+      ratings: []
     }
   }
+
+  ComponentDidMount() {
+    this.getPictures();
+  }
+  getPictures() {
+    // axios.get('/stay')
+  }
+
+
   render() {
     return (
       <div>
         Hello World
-        <Component1/>
+        <div id="checked"></div>
+        <PictureList/>
       </div>
     );
   }

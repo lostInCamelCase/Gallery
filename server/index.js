@@ -3,7 +3,6 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const model = require('../db/model.js');
 const random = require('../db/infoGeneration.js');
-
 const app = express();
 const PORT = 3008;
 
@@ -14,7 +13,7 @@ app.use(express.static(path.join(__dirname, '../client/dist')));
 app.get('/stay', (req, res) => {
   model.getInfo((err, data) => {
     if (err) {
-      // console.log('error getting data', err);
+      console.log('error getting data');
       res.status(404).send();
     } else {
       res.status(200).send(data);
@@ -48,3 +47,4 @@ app.get('/stay/pictures', (req, res) => {
 // Start the server on the provided port
 app.listen(PORT, () => console.log(`Listening on port: ${PORT}`));
 
+module.exports = app;

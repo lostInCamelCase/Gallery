@@ -2,7 +2,6 @@ const db = require('./index.js');
 const random = require('./infoGeneration.js');
 
 const insertInfo = () => {
-  // console.log(`${placeName},${rating},${host},${location}`)
   for (let i = 1; i < 101; i++) {
     const placeName = random.randomListingName();
     const location = random.randomLocation();

@@ -1,6 +1,6 @@
 import React from 'react';
 
-var Component2 = (props) => {
+var PictureView = (props) => {
 
 
   return (
@@ -11,4 +11,4 @@ var Component2 = (props) => {
 
 }
 
-export default Component2;
+export default PictureView;
