@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage --colors",
+    "test:coverage": "jest --coverage --runInBand --detectOpenHandles --colors",
     "react-dev": "webpack -w",
     "start": "nodemon ./server/index.js",
     "seed": "mysql -u root -p <gallery.sql",

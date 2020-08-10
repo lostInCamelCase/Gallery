@@ -1,5 +1,5 @@
 import React from 'react';
-import Component1 from './Component1.jsx';
+import PictureList from './PictureList.jsx';
 
 class App extends React.Component {
   constructor(props){
@@ -8,11 +8,17 @@ class App extends React.Component {
       pictures: []
     }
   }
+  getPictures() {
+
+  }
+
+
   render() {
     return (
       <div>
         Hello World
-        <Component1/>
+        <div id="checked"></div>
+        <PictureList/>
       </div>
     );
   }

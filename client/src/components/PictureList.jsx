@@ -1,16 +1,16 @@
 import React from 'react';
-import Component2 from './Component2.jsx'
+import PictureView from './PictureView.jsx'
 
-var Component1 = (props) => {
+var PictureList = (props) => {
 
 
   return (
     <div>
     Hello from Component1 working with jest and babel package
-    <Component2/>
+    <PictureView/>
     </div>
   )
 
 }
 
-export default Component1;
+export default PictureList;
