@@ -18,6 +18,8 @@ module.exports = {
   },
   randomNum: (min, max) => (Math.floor(Math.random() * (max - min + 1) + min)),
 
+  randomDeciNum: (min, max) => ((Math.random() * (max - min) + min).toPrecision(2)),
+
   randomListingName: () => {
     const randomNameNouns = nameNouns[module.exports.randomIdx(nameNouns)];
     const randomHouseType = houseType[module.exports.randomIdx(houseType)];

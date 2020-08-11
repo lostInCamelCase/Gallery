@@ -29,7 +29,7 @@ CREATE TABLE ratings
 (
   id int AUTO_INCREMENT NOT NULL,
   number_Of_Reviews INT NOT NULL,
-  stars INT NOT NULL,
+  stars DECIMAL(19 , 1) NOT NULL,
   stay_id INT NOT NULL,
   superHost varchar (255) NOT NULL,
   PRIMARY KEY(id),
