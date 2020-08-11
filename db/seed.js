@@ -16,7 +16,7 @@ const insertInfo = () => {
 const insertRating = () => {
   for (let i = 1; i < 101; i++) {
     const reviews = random.randomNum(10, 388);
-    const stars = random.randomNum(3, 5);
+    const stars = random.randomDeciNum(3, 5);
     const host = random.superHost();
     db.query(`insert into ratings (number_Of_Reviews, stars, stay_id, superHost) values ("${reviews}", "${stars}","${i}", "${host}")`, (err) => {
       if (err) {

@@ -1,16 +1,12 @@
 import React from 'react';
-import PictureView from './PictureView.jsx'
+import PictureView from './PictureView.jsx';
 
-var PictureList = (props) => {
-
-
-  return (
-    <div>
-    Hello from Component1 working with jest and babel package
-    <PictureView/>
-    </div>
-  )
-
-}
+const PictureList = ({pictures}) => (
+  <div>
+   {pictures.map((image) => (
+     <PictureView image={image} key={image.id}/>
+   ))}
+  </div>
+);
 
 export default PictureList;

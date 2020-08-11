@@ -1,14 +1,9 @@
 import React from 'react';
 
-var PictureView = (props) => {
-
-
-  return (
-    <div>
-    Hello from Component2 with updated packages
-    </div>
-  )
-
-}
+const PictureView = ({image}) => (
+  <div>
+    <img src= {image.images} ></img>
+  </div>
+);
 
 export default PictureView;
