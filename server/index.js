@@ -6,12 +6,14 @@ const random = require('../db/infoGeneration.js');
 const app = express();
 const PORT = 3008;
 
+let stayId = 0;
 app.use(bodyParser.json());
 // Serve static files.
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
 app.get('/stay', (req, res) => {
-  model.getInfo((err, data) => {
+  stayId = random.randomNum(1, 100);
+  model.getInfo(stayId, (err, data) => {
     if (err) {
       console.log('error getting data');
       res.status(404).send();
@@ -22,8 +24,8 @@ app.get('/stay', (req, res) => {
 });
 
 app.get('/stay/ratings', (req, res) => {
-  const id = random.randomNum(1, 100);
-  model.getRatings(id, (err, data) => {
+  // const id = random.randomNum(1, 100);
+  model.getRatings(stayId, (err, data) => {
     if (err) {
       // console.log('error getting data', err);
       res.status(404).send();
@@ -34,8 +36,8 @@ app.get('/stay/ratings', (req, res) => {
 });
 
 app.get('/stay/pictures', (req, res) => {
-  const id = random.randomNum(1, 100);
-  model.getPictures(id, (err, data) => {
+  // const id = random.randomNum(1, 100);
+  model.getPictures(stayId, (err, data) => {
     if (err) {
       // console.log('error getting data', err);
       res.status(404).send();
