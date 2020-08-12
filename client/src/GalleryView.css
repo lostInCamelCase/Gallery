@@ -1,0 +1,14 @@
+.images {
+  grid-column: 1;
+  grid-row: 3 / span 4;
+  border-radius: 10px;
+  width: 500px;
+  height: 320px;
+}
+
+.picContainer {
+  width: 1030px;
+  height: 437.59px;
+  margin-left: 10%;
+  margin-right: 10%;
+}

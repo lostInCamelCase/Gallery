@@ -1,9 +1,16 @@
 import React from 'react';
+import styles from '../PictureView.css';
 
-const PictureView = ({image}) => (
-  <div>
-    <img src= {image.images} ></img>
+const PictureView = ({gallery}) =>
+  (
+  <div className={styles.imageContainer}>
+    <img className={styles.LargeImages} src={gallery[0].images} ></img>
+    <img className={styles.smallIntImage} src={gallery[1].images} ></img>
+    <img className={styles.smallIntImage} src={gallery[2].images} ></img>
+    <img className={styles.smallEndImageTop} src={gallery[3].images} ></img>
+    <img className={styles.smallEndImageBot} src={gallery[4].images} ></img>
   </div>
 );
+
 
 export default PictureView;

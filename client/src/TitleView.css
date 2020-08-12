@@ -1,0 +1,4 @@
+.title {
+  grid-template-columns: 50% 50% repeat ;
+  grid-row: 1 / 4;
+}
