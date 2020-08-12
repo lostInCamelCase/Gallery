@@ -6,7 +6,7 @@ const random = require('../db/infoGeneration.js');
 const app = express();
 const PORT = 3008;
 
-let stayId = 0;
+let stayId = 1;
 app.use(bodyParser.json());
 // Serve static files.
 app.use(express.static(path.join(__dirname, '../client/dist')));

@@ -3,9 +3,9 @@ import PictureView from './PictureView.jsx';
 
 const PictureList = ({pictures}) => (
   <div>
-   {pictures.map((image) => (
-     <PictureView image={image} key={image.id}/>
-   ))}
+   {/* {gallery.map((image) => (
+    //  <PictureView image={image} key={image.id}/>
+   ))} */}
   </div>
 );
 
