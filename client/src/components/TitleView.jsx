@@ -3,8 +3,9 @@ import styles from '../TitleView.css';
 
 const TitleView = ({stayName, rating}) => (
   <div className={styles.title}>
-    <h1 >{stayName.placeName}</h1>
-    <h3 className={styles.rating}>{rating.stars} ({rating.number_Of_Reviews}) {stayName.location}</h3>
+    <h2>{stayName.placeName}</h2>
+    <div className={styles.rating}>{rating.stars}  ({rating.number_Of_Reviews})</div>
+    <div className={styles.location}>{stayName.location}</div>
   </div>
 );
 

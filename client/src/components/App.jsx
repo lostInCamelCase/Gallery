@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import PictureList from './PictureList.jsx';
 import PictureView from './PictureView.jsx';
 import TitleView from './TitleView.jsx';
 import styles from '../App.css';
