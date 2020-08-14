@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import GalleryList from './GalleryList.jsx';
 import PictureView from './PictureView.jsx';
 import TitleView from './TitleView.jsx';
 import styles from '../App.css';
@@ -12,7 +13,10 @@ class App extends React.Component {
       gallery: this.props.infoState.gallery,
       ratings: [],
       stayName: '',
+      show: false
     };
+    this.hideModal = this.hideModal.bind(this);
+    this.showModal = this.showModal.bind(this);
   }
 
   componentWillMount() {
@@ -52,15 +56,24 @@ class App extends React.Component {
       });
   }
 
+  showModal() {
+    this.setState({show: true});
+    // console.log('clicked show')
+  }
+
+  hideModal() {
+    this.setState({show: false});
+    // console.log('clicked hide')
+  }
+
   render() {
     return (
       <div className={styles.container}>
         <TitleView stayName={this.state.stayName} rating={this.state.ratings}/>
         <div className={styles.pictureContainer}>
-        <PictureView gallery={this.state.gallery}/>
+        <PictureView gallery={this.state.gallery} openModal={this.showModal}/>
+        <GalleryList show={this.state.show} handleClose={this.hideModal} pictures={this.state.pictures}/>
         </div>
-
-        {/* <Gallery pictures={this.state.pictures}/> */}
       </div>
     );
   }
