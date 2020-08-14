@@ -1,0 +1,28 @@
+
+
+.modalMain {
+  display:flex;
+  position:fixed;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  overflow-x: hidden;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  z-index: auto;
+  background: #ffffff;
+  transition: opacity 0.2s ease;
+}
+
+.displayBlock {
+  display: block;
+  overflow-x: auto;
+}
+
+.displayNone {
+  display:none;
+}

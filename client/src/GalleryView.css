@@ -1,14 +1,12 @@
 .images {
-  grid-column: 1;
-  grid-row: 3 / span 4;
-  border-radius: 10px;
-  width: 500px;
-  height: 320px;
-}
-
-.picContainer {
-  width: 1030px;
-  height: 437.59px;
-  margin-left: 10%;
-  margin-right: 10%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  height: 70%;
+  width: 70%;
+  align-items: center;
+  align-content: center;
+  margin: auto;
+  margin-top: 10%;
+  overflow-y: scroll;
 }
