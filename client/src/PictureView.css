@@ -1,6 +1,6 @@
 .imageContainer {
   display: grid;
-  grid-template-columns: 300px 300px 280px 280px 100px;
+  grid-template-columns: 300px 300px 280px 280px ;
   grid-template-rows: 200px 200px;
   column-gap: 10px;
   row-gap: 10px;

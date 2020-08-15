@@ -1,6 +1,6 @@
 .title {
   display: grid;
-  grid-template-columns: 20px 80px 20px 80px 200px 200px 200px;
+  grid-template-columns: 20px 80px 20px 80px 200px 200px 200px 200px 100px 50px 40px ;
   grid-template-rows: 40px 30px;
   grid-row: 1 / 4;
   margin-bottom: 20px;
