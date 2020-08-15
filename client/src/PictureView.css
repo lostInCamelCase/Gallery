@@ -1,0 +1,54 @@
+.imageContainer {
+  display: grid;
+  grid-template-columns: 300px 300px 280px 280px ;
+  grid-template-rows: 200px 200px;
+  column-gap: 10px;
+  row-gap: 10px;
+  margin-right: 200px;
+}
+
+.largeImages {
+  /* border-radius: 10px; */
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 610px;
+  height: 410px;
+}
+.largeImage:hover {
+  background-color:rgb(168, 168, 168);
+}
+
+.smallIntImage {
+  grid-column: 3;
+  width: 280px;
+  height: 200px;
+}
+.smallEndImageTop {
+  grid-column: 4;
+  grid-row: 1;
+  border-top-right-radius: 10px;
+  width: 280px;
+  height: 200px;
+}
+.smallEndImageBot {
+  grid-column: 4;
+  grid-row: 2;
+  border-bottom-right-radius: 10px;
+  width: 280px;
+  height: 200px;
+}
+
+.showAllBtn {
+  border-radius: 10px;
+  background-color: white;
+  width: 120px;
+  height: 30px;
+  grid-column: 4;
+  grid-row: 2;
+  margin-top: 50%;
+  margin-left: 50%;
+}
+
+.showAllBtn:hover {
+    background-color:rgb(168, 168, 168);
+}
