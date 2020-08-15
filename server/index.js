@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const model = require('../db/model.js');
 const random = require('../db/infoGeneration.js');
 const app = express();
-const PORT = 3008;
+const PORT = 3009;
 
 let stayId = 1;
 app.use(bodyParser.json());
