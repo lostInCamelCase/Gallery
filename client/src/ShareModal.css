@@ -1,7 +1,7 @@
 .shareModal {
   position: fixed;
   width: 25%;
-  height: 70%;
+  height: 73%;
   top:45%;
   left:50%;
   transform: translate(-50%,-50%);
@@ -23,20 +23,32 @@
   align-self: center;
   grid-column: 1;
   grid-row: 1;
+  margin-top: 20px;
   border: none;
   font-family: 'Airbnb Cereal App Book';
   justify-self: center;
   background-color: white;
+  font-size: 20px;
+  color: rgb(219, 219, 219);
 }
 
-.closeBtn, .facebook, .facebookIcon, .twitter, .twitterIcon, .copy, .copyIcon, .email, .emailIcon, .sms, .smsIcon, .messanger, .messangerIcon, .whatsApp, .whatsAppIcon, .embed, .embedIcon :hover {
+.closeBtn:hover {
   cursor: pointer;
+}
+
+ .facebook, .facebookIcon, .twitter, .twitterIcon, .copy, .copyIcon, .email, .emailIcon, .sms, .smsIcon, .messanger, .messangerIcon, .whatsApp, .whatsAppIcon, .embed, .embedIcon :hover {
+  cursor: pointer;
+}
+
+.facebook:hover, .twitter:hover, .copy:hover, .email:hover, .sms:hover, .messanger:hover, .whatsApp:hover, .embed:hover {
+  text-decoration: underline;
+  text-decoration-color: rgb(65, 64, 64);
 }
 
 .gridModal {
   display: grid;
   grid-template-columns: 50px 50px 50px 50px 100px;
-  grid-template-rows: 30px 50px 60px 60px 60px 60px 60px 60px 60px 60px ;
+  grid-template-rows: 30px 60px 60px 60px 60px 60px 60px 60px 60px 60px ;
   justify-content: center;
 }
 
@@ -61,6 +73,7 @@
   grid-column: 2 / span 2;
   grid-row: 3;
   align-self: center;
+  color: teal;
 }
 
 .twitterIcon {
@@ -75,6 +88,7 @@
   grid-column: 2 / span 2;
   grid-row: 4;
   align-self: center;
+  color: teal;
 }
 
 .copyIcon {
@@ -88,6 +102,7 @@
   grid-column: 2 / span 2;
   grid-row: 5;
   align-self: center;
+  color: teal;
 }
 
 .emailIcon {
@@ -102,6 +117,7 @@
   grid-column: 2 / span 2;
   grid-row: 6;
   align-self: center;
+  color: teal;
 }
 
 .smsIcon {
@@ -115,6 +131,7 @@
   grid-column: 2 / span 2;
   grid-row: 7;
   align-self: center;
+  color: teal;
 }
 
 .messangerIcon {
@@ -128,6 +145,7 @@
   grid-column: 2 / span 2;
   grid-row: 8;
   align-self: center;
+  color: teal;
 }
 
 .whatsAppIcon {
@@ -142,6 +160,7 @@
   grid-column: 2 / span 2;
   grid-row: 9;
   align-self: center;
+  color: teal;
 }
 
 .embedIcon {
@@ -156,6 +175,7 @@
   grid-column: 2 / span 2;
   grid-row: 10;
   align-self: center;
+  color: teal;
 }
 
 .l1 {

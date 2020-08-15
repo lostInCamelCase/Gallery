@@ -101,7 +101,7 @@ class App extends React.Component {
   render() {
     return (
       <div className={styles.container}>
-        <TitleView stayName={this.state.stayName} rating={this.state.ratings}/>
+        <TitleView stayName={this.state.stayName} rating={this.state.ratings} showShare={this.showShareModal}/>
         <div className={styles.pictureContainer}>
         <PictureView gallery={this.state.gallery} openModal={this.showModal} />
         <GalleryList

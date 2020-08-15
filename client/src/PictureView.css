@@ -14,9 +14,6 @@
   width: 610px;
   height: 410px;
 }
-.largeImage:hover {
-  background-color:rgb(168, 168, 168);
-}
 
 .smallIntImage {
   grid-column: 3;
@@ -37,6 +34,10 @@
   width: 280px;
   height: 200px;
 }
+.smallEndImageBot:hover, .smallEndImageTop:hover, .smallIntImage:hover, .largeImages:hover {
+  cursor: pointer;
+  background-color:rgb(39, 38, 38);
+}
 
 .showAllBtn {
   border-radius: 10px;
@@ -52,5 +53,6 @@
 }
 
 .showAllBtn:hover {
-    background-color:rgb(168, 168, 168);
+  cursor: pointer;
+  background-color:rgb(235, 235, 235);
 }
