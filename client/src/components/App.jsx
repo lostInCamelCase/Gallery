@@ -13,13 +13,18 @@ class App extends React.Component {
       gallery: this.props.infoState.gallery,
       ratings: [],
       stayName: '',
-      show: false
+      show: false,
+      currentIdx: 0,
+
+
     };
     this.hideModal = this.hideModal.bind(this);
     this.showModal = this.showModal.bind(this);
+    this.leftArrow = this.leftArrow.bind(this);
+    this.rightArrow = this.rightArrow.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.getStayName();
     this.getRatings();
     this.getPictures();
@@ -66,13 +71,40 @@ class App extends React.Component {
     // console.log('clicked hide')
   }
 
+  leftArrow() {
+    console.log('begin left')
+    if (this.state.currentIdx > 0) {
+      this.setState({ currentIdx: this.state.currentIdx - 1 })
+      console.log('right clicked',this.state.currentIdx);
+      // console.log('length',length);
+    };
+    if (this.state.currentIdx === 0) {
+      this.setState({currentIdx: 0})
+    }
+  }
+
+  rightArrow() {
+    console.log('begin right');
+    let length = this.state.pictures.length;
+    // console.log('length', length);
+    // console.log('state', this.state.currentIdx +1);
+    if (this.state.currentIdx >= 0 && this.state.currentIdx < length -1) {
+      this.setState({ currentIdx: this.state.currentIdx + 1 });
+      console.log('right clicked',this.state.currentIdx);
+      console.log('length',length);
+    };
+    if (this.state.currentIdx === length) {
+      this.setState({currentIdx: length});
+    }
+  }
+
   render() {
     return (
       <div className={styles.container}>
         <TitleView stayName={this.state.stayName} rating={this.state.ratings}/>
         <div className={styles.pictureContainer}>
         <PictureView gallery={this.state.gallery} openModal={this.showModal}/>
-        <GalleryList show={this.state.show} handleClose={this.hideModal} pictures={this.state.pictures}/>
+        <GalleryList show={this.state.show} handleClose={this.hideModal} pictures={this.state.pictures} left={this.leftArrow} right={this.rightArrow} idx={this.state.currentIdx}/>
         </div>
       </div>
     );

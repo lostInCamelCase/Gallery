@@ -1,12 +1,23 @@
-.images {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  height: 70%;
-  width: 70%;
-  align-items: center;
-  align-content: center;
-  margin: auto;
-  margin-top: 10%;
-  overflow-y: scroll;
+.imagesContainer {
+  height: 100%;
+  width: 100%;
+  justify-self: center;
+  grid-column: 2;
+  grid-row: 2;
+  animation: fadeOut 2s linear;
+  transition: ease-in-out;
 }
+
+.images {
+  height: 100%;
+  width: 100%;
+  justify-self: center;
+  margin: auto;
+  /* animation: fadeOut 2s linear; */
+}
+@keyframes fadeOut {
+  0% { opacity: 1;}
+  90% { opacity: 0.01;}
+  100% { opacity: 0;}
+}
+
