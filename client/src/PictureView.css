@@ -47,6 +47,8 @@
   grid-row: 2;
   margin-top: 50%;
   margin-left: 50%;
+  border-color: black;
+  border-width: thin;
 }
 
 .showAllBtn:hover {

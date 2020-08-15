@@ -3,6 +3,7 @@ import axios from 'axios';
 import GalleryList from './GalleryList.jsx';
 import PictureView from './PictureView.jsx';
 import TitleView from './TitleView.jsx';
+import ShareModal from './ShareModal.jsx';
 import styles from '../App.css';
 
 class App extends React.Component {
@@ -15,10 +16,12 @@ class App extends React.Component {
       stayName: '',
       show: false,
       currentIdx: 0,
-
+      showShareModal: false
     };
     this.hideModal = this.hideModal.bind(this);
     this.showModal = this.showModal.bind(this);
+    this.showShareModal = this.showShareModal.bind(this);
+    this.hideShareModal = this.hideShareModal.bind(this);
     this.leftArrow = this.leftArrow.bind(this);
     this.rightArrow = this.rightArrow.bind(this);
   }
@@ -68,6 +71,14 @@ class App extends React.Component {
     this.setState({ show: false });
   }
 
+  showShareModal() {
+    this.setState({ showShareModal: true });
+  }
+
+  hideShareModal() {
+    this.setState({ showShareModal: false });
+  }
+
   leftArrow() {
     if (this.state.currentIdx > 0) {
       this.setState({ currentIdx: this.state.currentIdx - 1 });
@@ -93,7 +104,15 @@ class App extends React.Component {
         <TitleView stayName={this.state.stayName} rating={this.state.ratings}/>
         <div className={styles.pictureContainer}>
         <PictureView gallery={this.state.gallery} openModal={this.showModal} />
-        <GalleryList show={this.state.show} handleClose={this.hideModal} pictures={this.state.pictures} left={this.leftArrow} right={this.rightArrow} idx={this.state.currentIdx} />
+        <GalleryList
+        show={this.state.show}
+        handleClose={this.hideModal}
+        pictures={this.state.pictures}
+        left={this.leftArrow}
+        right={this.rightArrow}
+        idx={this.state.currentIdx}
+        showShare={this.showShareModal}/>
+        <ShareModal showModal={this.state.showShareModal} handleClose={this.hideShareModal}/>
         </div>
       </div>
     );
