@@ -5,6 +5,9 @@ const TitleView = ({stayName, rating}) => (
   <div className={styles.title}>
     <h2>{stayName.placeName}</h2>
     <div className={styles.rating}>{rating.stars}  ({rating.number_Of_Reviews})</div>
+    <div className={styles.star}><i className="fas fa-star"></i></div>
+    <div className={styles.medal}><i className="fas fa-medal"></i></div>
+    <div className={styles.host}>{rating.superHost}</div>
     <div className={styles.location}>{stayName.location}</div>
   </div>
 );

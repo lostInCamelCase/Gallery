@@ -16,7 +16,6 @@ class App extends React.Component {
       show: false,
       currentIdx: 0,
 
-
     };
     this.hideModal = this.hideModal.bind(this);
     this.showModal = this.showModal.bind(this);
@@ -44,7 +43,7 @@ class App extends React.Component {
     axios.get('/stay/pictures')
       .then((response) => {
         this.setState({ pictures: response.data }, () => {});
-        this.setState({ gallery: response.data.slice(0,6) }, () => {});
+        this.setState({ gallery: response.data.slice(0, 6) }, () => {});
       })
       .catch((err) => {
         console.log('error', err);
@@ -62,39 +61,29 @@ class App extends React.Component {
   }
 
   showModal() {
-    this.setState({show: true});
-    // console.log('clicked show')
+    this.setState({ show: true });
   }
 
   hideModal() {
-    this.setState({show: false});
-    // console.log('clicked hide')
+    this.setState({ show: false });
   }
 
   leftArrow() {
-    console.log('begin left')
     if (this.state.currentIdx > 0) {
-      this.setState({ currentIdx: this.state.currentIdx - 1 })
-      console.log('right clicked',this.state.currentIdx);
-      // console.log('length',length);
-    };
+      this.setState({ currentIdx: this.state.currentIdx - 1 });
+    }
     if (this.state.currentIdx === 0) {
-      this.setState({currentIdx: 0})
+      this.setState({ currentIdx: 0 });
     }
   }
 
   rightArrow() {
-    console.log('begin right');
-    let length = this.state.pictures.length;
-    // console.log('length', length);
-    // console.log('state', this.state.currentIdx +1);
-    if (this.state.currentIdx >= 0 && this.state.currentIdx < length -1) {
+    const length = this.state.pictures.length;
+    if (this.state.currentIdx >= 0 && this.state.currentIdx < length - 1) {
       this.setState({ currentIdx: this.state.currentIdx + 1 });
-      console.log('right clicked',this.state.currentIdx);
-      console.log('length',length);
-    };
+    }
     if (this.state.currentIdx === length) {
-      this.setState({currentIdx: length});
+      this.setState({ currentIdx: length });
     }
   }
 
@@ -103,8 +92,8 @@ class App extends React.Component {
       <div className={styles.container}>
         <TitleView stayName={this.state.stayName} rating={this.state.ratings}/>
         <div className={styles.pictureContainer}>
-        <PictureView gallery={this.state.gallery} openModal={this.showModal}/>
-        <GalleryList show={this.state.show} handleClose={this.hideModal} pictures={this.state.pictures} left={this.leftArrow} right={this.rightArrow} idx={this.state.currentIdx}/>
+        <PictureView gallery={this.state.gallery} openModal={this.showModal} />
+        <GalleryList show={this.state.show} handleClose={this.hideModal} pictures={this.state.pictures} left={this.leftArrow} right={this.rightArrow} idx={this.state.currentIdx} />
         </div>
       </div>
     );

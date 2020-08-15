@@ -4,7 +4,7 @@
   justify-self: center;
   grid-column: 2;
   grid-row: 2;
-  animation: fadeOut 2s linear;
+  animation: fadeOut 1s;
   transition: ease-in-out;
 }
 
@@ -17,7 +17,7 @@
 }
 @keyframes fadeOut {
   0% { opacity: 1;}
-  90% { opacity: 0.01;}
+  60% { opacity: 0.01;}
   100% { opacity: 0;}
 }
 
