@@ -63,8 +63,9 @@ class App extends React.Component {
       });
   }
 
-  showModal() {
+  showModal(id) {
     this.setState({ show: true });
+    this.setState({ currentIdx: id });
   }
 
   hideModal() {
