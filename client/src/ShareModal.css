@@ -1,0 +1,242 @@
+.shareModal {
+  position: fixed;
+  width: 25%;
+  height: 73%;
+  top:45%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  background: #ffffff;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.664);
+}
+
+.displayShare {
+  display:block;
+}
+
+.displayShareNone {
+  display:none;
+}
+
+.closeBtn {
+  height: 35px;
+  width: 75px;
+  align-self: center;
+  grid-column: 1;
+  grid-row: 1;
+  margin-top: 20px;
+  border: none;
+  font-family: 'Airbnb Cereal App Book';
+  justify-self: center;
+  background-color: white;
+  font-size: 20px;
+  color: rgb(219, 219, 219);
+}
+
+.closeBtn:hover {
+  cursor: pointer;
+}
+
+ .facebook, .facebookIcon, .twitter, .twitterIcon, .copy, .copyIcon, .email, .emailIcon, .sms, .smsIcon, .messanger, .messangerIcon, .whatsApp, .whatsAppIcon, .embed, .embedIcon :hover {
+  cursor: pointer;
+}
+
+.facebook:hover, .twitter:hover, .copy:hover, .email:hover, .sms:hover, .messanger:hover, .whatsApp:hover, .embed:hover {
+  text-decoration: underline;
+  text-decoration-color: rgb(65, 64, 64);
+}
+
+.gridModal {
+  display: grid;
+  grid-template-columns: 50px 50px 50px 50px 100px;
+  grid-template-rows: 30px 60px 60px 60px 60px 60px 60px 60px 60px 60px ;
+  justify-content: center;
+}
+
+.title {
+  font-family: 'Airbnb Cereal App Book';
+  grid-column: 1/ span 4;
+  grid-row: 1 / span 2;
+  border-bottom: black;
+  place-self: center;
+  font-size: 20px;
+}
+
+.facebookIcon {
+  grid-column: 1;
+  grid-row: 3;
+  place-self: center;
+  color: rgb(78, 76, 76);
+}
+
+.facebook {
+  font-family: 'Airbnb Cereal App Book';
+  grid-column: 2 / span 2;
+  grid-row: 3;
+  align-self: center;
+  color: teal;
+}
+
+.twitterIcon {
+  grid-column: 1;
+  grid-row: 4;
+  place-self: center;
+  color: rgb(78, 76, 76);
+}
+
+.twitter {
+  font-family: 'Airbnb Cereal App Book';
+  grid-column: 2 / span 2;
+  grid-row: 4;
+  align-self: center;
+  color: teal;
+}
+
+.copyIcon {
+  grid-column: 1;
+  grid-row: 5;
+  place-self: center;
+  color: rgb(78, 76, 76);
+}
+.copy{
+  font-family: 'Airbnb Cereal App Book';
+  grid-column: 2 / span 2;
+  grid-row: 5;
+  align-self: center;
+  color: teal;
+}
+
+.emailIcon {
+  grid-column: 1;
+  grid-row: 6;
+  place-self: center;
+  color: rgb(78, 76, 76);
+}
+
+.email {
+  font-family: 'Airbnb Cereal App Book';
+  grid-column: 2 / span 2;
+  grid-row: 6;
+  align-self: center;
+  color: teal;
+}
+
+.smsIcon {
+  grid-column: 1;
+  grid-row: 7;
+  place-self: center;
+  color: rgb(78, 76, 76);
+}
+.sms{
+  font-family: 'Airbnb Cereal App Book';
+  grid-column: 2 / span 2;
+  grid-row: 7;
+  align-self: center;
+  color: teal;
+}
+
+.messangerIcon {
+  grid-column: 1;
+  grid-row: 8;
+  place-self: center;
+  color: rgb(78, 76, 76);
+}
+.messanger{
+  font-family: 'Airbnb Cereal App Book';
+  grid-column: 2 / span 2;
+  grid-row: 8;
+  align-self: center;
+  color: teal;
+}
+
+.whatsAppIcon {
+  grid-column: 1;
+  grid-row: 9;
+  place-self: center;
+  color: rgb(78, 76, 76);
+}
+
+.whatsApp{
+  font-family: 'Airbnb Cereal App Book';
+  grid-column: 2 / span 2;
+  grid-row: 9;
+  align-self: center;
+  color: teal;
+}
+
+.embedIcon {
+  grid-column: 1;
+  grid-row: 10;
+  place-self: center;
+  color: rgb(78, 76, 76);
+}
+
+.embed{
+  font-family: 'Airbnb Cereal App Book';
+  grid-column: 2 / span 2;
+  grid-row: 10;
+  align-self: center;
+  color: teal;
+}
+
+.l1 {
+  color:rgba(228, 228, 228, 0.808);
+  grid-column: 1 /span 5;
+  grid-row: 2;
+  align-self: end;
+}
+
+.l2 {
+  color:rgba(228, 228, 228, 0.808);
+  grid-column: 1 /span 5;
+  grid-row: 3;
+  align-self: end;
+}
+
+.l3 {
+  color:rgba(228, 228, 228, 0.808);
+  grid-column: 1 /span 5;
+  grid-row: 4;
+  align-self: end;
+}
+
+.l4 {
+  color:rgba(228, 228, 228, 0.808);
+  grid-column: 1 /span 5;
+  grid-row: 5;
+  align-self: end;
+}
+
+.l5 {
+  color:rgba(228, 228, 228, 0.808);
+  grid-column: 1 /span 5;
+  grid-row: 6;
+  align-self: end;
+}
+
+.l6 {
+  color:rgba(228, 228, 228, 0.808);
+  grid-column: 1 /span 5;
+  grid-row: 7;
+  align-self: end;
+}
+
+.l7 {
+  color:rgba(228, 228, 228, 0.808);
+  grid-column: 1 /span 5;
+  grid-row: 8;
+  align-self: end;
+}
+
+.l8 {
+  color:rgba(228, 228, 228, 0.808);
+  grid-column: 1 /span 5;
+  grid-row: 9;
+  align-self: end;
+}
+
+.l9 {
+  color:rgba(228, 228, 228, 0.808);
+  grid-column: 1 /span 5;
+  grid-row: 10;
+  align-self: end;
+}

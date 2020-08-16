@@ -1,0 +1,58 @@
+.imageContainer {
+  display: grid;
+  grid-template-columns: 300px 300px 280px 280px ;
+  grid-template-rows: 200px 200px;
+  column-gap: 10px;
+  row-gap: 10px;
+  margin-right: 200px;
+}
+
+.largeImages {
+  /* border-radius: 10px; */
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 610px;
+  height: 410px;
+}
+
+.smallIntImage {
+  grid-column: 3;
+  width: 280px;
+  height: 200px;
+}
+.smallEndImageTop {
+  grid-column: 4;
+  grid-row: 1;
+  border-top-right-radius: 10px;
+  width: 280px;
+  height: 200px;
+}
+.smallEndImageBot {
+  grid-column: 4;
+  grid-row: 2;
+  border-bottom-right-radius: 10px;
+  width: 280px;
+  height: 200px;
+}
+.smallEndImageBot:hover, .smallEndImageTop:hover, .smallIntImage:hover, .largeImages:hover {
+  cursor: pointer;
+  background-color:rgb(39, 38, 38);
+}
+
+.showAllBtn {
+  border-radius: 10px;
+  background-color: white;
+  width: 120px;
+  height: 30px;
+  grid-column: 4;
+  grid-row: 2;
+  margin-top: 50%;
+  margin-left: 50%;
+  border-color: black;
+  border-width: thin;
+}
+
+.showAllBtn:hover {
+  cursor: pointer;
+  background-color:rgb(235, 235, 235);
+}

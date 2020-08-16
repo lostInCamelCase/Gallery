@@ -1,0 +1,155 @@
+
+
+.modalMain {
+  display: grid;
+  grid-template-columns: 10% 80% 5% 5%;
+  grid-template-rows: 10% 80% 10%;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  overflow-x: hidden;
+  background: #ffffff;
+  transition: opacity 0.2s ease;
+  animation: modalPopup 0.5s;
+}
+@keyframes modalPopup {
+  from {
+    bottom: -300px;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+.displayBlock {
+  display: block;
+  /* overflow-x: auto; */
+}
+
+.displayNone {
+  display:none;
+}
+
+.rightBtn {
+  grid-column: 3 /span 2;
+  grid-row: 2;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  border-color: #030303;
+  justify-self: center;
+  align-self: center;
+  border-width: thin;
+  background-color: white;
+}
+
+.rightBtn:hover {
+  cursor: pointer;
+  background-color:rgb(235, 235, 235);
+}
+
+.leftBtn {
+  grid-column: 1;
+  grid-row: 2;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  border-color: #030303;
+  justify-self: center;
+  align-self: center;
+  background-color: white;
+  border-width: thin;
+}
+
+.leftBtn:hover {
+  cursor: pointer;
+  background-color:rgb(235, 235, 235);
+}
+
+.closeBtn {
+  height: 35px;
+  width: 75px;
+  background-color: rgb(245, 245, 245);
+  border-radius: 10px;
+  align-self: center;
+  grid-column: 1;
+  grid-row: 1;
+  border: none;
+  font-family: 'Airbnb Cereal App Book';
+  justify-self: center;
+}
+
+.closeBtn:hover {
+  cursor: pointer;
+  background-color:rgb(235, 235, 235);
+}
+
+.picIdx {
+  font-family: 'Airbnb Cereal App Book';
+  align-self: center;
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+}
+
+.picIdx:hover {
+  cursor: text;
+}
+
+.caption {
+  font-family: 'Airbnb Cereal App Book';
+  grid-column: 2;
+  grid-row: 3;
+  justify-items: center;
+  justify-self: center;
+  margin-top: 2%;
+}
+
+.caption:hover {
+  cursor: text;
+}
+
+.share {
+  display: flex;
+  font-family: 'Airbnb Cereal App Book';
+  grid-column: 3;
+  grid-row: 1;
+  transform: rotate(-90deg);
+  height: 30px;
+  width: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-left: 30px;
+}
+.share:hover {
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: rgba(247, 247, 247, 0.822);
+  border: none;
+}
+
+.heart {
+  display: flex;
+  font-family: 'Airbnb Cereal App Book';
+  grid-column: 4;
+  grid-row: 1;
+  height: 30px;
+  width: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.heart:hover {
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: rgba(247, 247, 247, 0.822);
+  border: none;
+}
