@@ -9,7 +9,7 @@ const PictureView = ({gallery, openModal}) =>
     <img className={styles.smallIntImage} src={gallery[2].images} onClick={() => openModal(2)}></img>
     <img className={styles.smallEndImageTop} src={gallery[3].images} onClick={() => openModal(3)}></img>
     <img className={styles.smallEndImageBot} src={gallery[4].images} onClick={() => openModal(4)}></img>
-    <button className={styles.showAllBtn} onClick={openModal}>Show all photos</button>
+    <button className={styles.showAllBtn} onClick={() => openModal(0)}>Show all photos</button>
   </div>
 );
 

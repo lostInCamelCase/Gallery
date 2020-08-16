@@ -1,7 +1,6 @@
 
 
 .modalMain {
-  /* display:flex; */
   display: grid;
   grid-template-columns: 10% 80% 5% 5%;
   grid-template-rows: 10% 80% 10%;
@@ -14,6 +13,18 @@
   overflow-x: hidden;
   background: #ffffff;
   transition: opacity 0.2s ease;
+  animation: modalPopup 0.5s;
+}
+@keyframes modalPopup {
+  from {
+    bottom: -300px;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
 }
 
 .displayBlock {
