@@ -4,6 +4,7 @@ import GalleryList from './GalleryList.jsx';
 import PictureView from './PictureView.jsx';
 import TitleView from './TitleView.jsx';
 import ShareModal from './ShareModal.jsx';
+import SaveModal from './SaveModal.jsx';
 import styles from '../App.css';
 
 class App extends React.Component {
@@ -16,12 +17,15 @@ class App extends React.Component {
       stayName: '',
       show: false,
       currentIdx: 0,
-      showShareModal: false
+      ShareModal: false,
+      SaveModal: false
     };
     this.hideModal = this.hideModal.bind(this);
     this.showModal = this.showModal.bind(this);
     this.showShareModal = this.showShareModal.bind(this);
     this.hideShareModal = this.hideShareModal.bind(this);
+    this.showSaveModal = this.showSaveModal.bind(this);
+    this.hideSaveModal = this.hideSaveModal.bind(this);
     this.leftArrow = this.leftArrow.bind(this);
     this.rightArrow = this.rightArrow.bind(this);
   }
@@ -73,11 +77,20 @@ class App extends React.Component {
   }
 
   showShareModal() {
-    this.setState({ showShareModal: true });
+    this.setState({ ShareModal: true });
   }
 
   hideShareModal() {
-    this.setState({ showShareModal: false });
+    this.setState({ ShareModal: false });
+  }
+
+  showSaveModal() {
+    this.setState({ SaveModal: true });
+  }
+
+  hideSaveModal() {
+    console.log('clicked save')
+    this.setState({ SaveModal: false });
   }
 
   leftArrow() {
@@ -102,7 +115,7 @@ class App extends React.Component {
   render() {
     return (
       <div className={styles.container}>
-        <TitleView stayName={this.state.stayName} rating={this.state.ratings} showShare={this.showShareModal}/>
+        <TitleView stayName={this.state.stayName} rating={this.state.ratings} showShare={this.showShareModal} showSave={this.showSaveModal}/>
         <div className={styles.pictureContainer}>
         <PictureView gallery={this.state.gallery} openModal={this.showModal} />
         <GalleryList
@@ -112,8 +125,10 @@ class App extends React.Component {
         left={this.leftArrow}
         right={this.rightArrow}
         idx={this.state.currentIdx}
-        showShare={this.showShareModal}/>
-        <ShareModal showModal={this.state.showShareModal} handleClose={this.hideShareModal}/>
+        showShare={this.showShareModal}
+        showSave={this.showSaveModal}/>
+        <ShareModal showModal={this.state.ShareModal} handleClose={this.hideShareModal}/>
+        <SaveModal showModal={this.state.SaveModal} handleClose={this.hideSaveModal} image={this.state.pictures}/>
         </div>
       </div>
     );

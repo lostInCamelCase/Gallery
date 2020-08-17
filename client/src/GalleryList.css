@@ -12,24 +12,20 @@
   transform: translate(-50%,-50%);
   overflow-x: hidden;
   background: #ffffff;
-  transition: opacity 0.2s ease;
-  animation: modalPopup 0.5s;
+  animation-name: animateBottom;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
 }
-@keyframes modalPopup {
-  from {
-    bottom: -300px;
-    opacity: 0;
-  }
 
-  to {
-    bottom: 0;
-    opacity: 1;
-  }
+@keyframes animateBottom {
+  0%   {top: 1000px; opacity: 1;}
+  25%  {top: 85%; opacity: 0.5;}
+  75%  {top: 75%; opacity: 0.15;}
+  100% {top: 65%; opacity: 0;}
 }
 
 .displayBlock {
   display: block;
-  /* overflow-x: auto; */
 }
 
 .displayNone {
