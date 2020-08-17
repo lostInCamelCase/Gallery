@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../TitleView.css';
 
-const TitleView = ({stayName, rating, showShare}) => (
+const TitleView = ({stayName, rating, showShare, showSave}) => (
   <div className={styles.title}>
     <h2>{stayName.placeName}</h2>
     <div className={styles.rating}>{rating.stars}  ({rating.number_Of_Reviews})</div>
@@ -15,7 +15,7 @@ const TitleView = ({stayName, rating, showShare}) => (
       </div>
       <div className={styles.shareText} onClick={showShare}>Share</div>
     </div>
-    <div className={styles.save}><i className="far fa-heart"></i> Save</div>
+    <div className={styles.save} onClick={showSave}><i className="far fa-heart"></i> Save</div>
   </div>
 );
 
