@@ -64,7 +64,20 @@ h2 {
   color: grey;
   text-decoration: underline;
 }
-.location:hover , .rating:hover, .star:hover {
+
+.location2 {
+  font-family: 'Airbnb Cereal App Book';
+  grid-column: 4 / span 3;
+  grid-row: 2;
+  align-self: center;
+  margin-top: 10px;
+  margin-left:10px;
+  margin-bottom: 10px;
+  color: grey;
+  text-decoration: underline;
+}
+
+.location:hover , .rating:hover, .star:hover, .location2:hover {
   cursor: pointer;
 }
 
