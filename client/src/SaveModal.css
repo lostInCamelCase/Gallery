@@ -5,7 +5,7 @@
   justify-content: center;
   position: fixed;
   width: 43%;
-  height: 31%;
+  height: 34%;
   top:45%;
   left:50%;
   border-radius: 15px;
@@ -18,10 +18,11 @@
 }
 
 @keyframes animateBottom {
-  0%   {top: 1000px; opacity: 1;}
-  35%  {top: 85%; opacity: 0.5;}
-  65%  {top: 75%; opacity: 0.25;}
-  100% {top: 65%; opacity: 0;}
+  0%   {top: 100%; opacity: 1;}
+  25%  {top: 90%; opacity: 0.75;}
+  50%  {top: 80%; opacity: 0.5;}
+  75%  {top: 70%; opacity: 0.25;}
+  100% {top: 65%; opacity: 0.1;}
 }
 
 .displayShare {
@@ -34,14 +35,14 @@
 
 .closeBtn {
   height: 35px;
-  width: 75px;
+  width: 35px;
   align-self: center;
   grid-column: 1;
   grid-row: 1;
   margin-top: 20px;
   border: none;
   font-family: 'Airbnb Cereal App Book';
-  justify-self: center;
+  justify-self: start;
   background-color: white;
   font-size: 20px;
 }
@@ -49,7 +50,7 @@
 .closeBtn:hover {
   cursor: pointer;
   border-radius: 50%;
-  background-color: rgb(228, 226, 226);
+  background-color: rgb(241, 240, 240);
 }
 
 .image {
