@@ -5,7 +5,7 @@
   justify-content: center;
   position: fixed;
   width: 43%;
-  height: 31%;
+  height: 34%;
   top:45%;
   left:50%;
   border-radius: 15px;
@@ -34,7 +34,7 @@
 
 .closeBtn {
   height: 35px;
-  width: 75px;
+  width: 35px;
   align-self: center;
   grid-column: 1;
   grid-row: 1;
@@ -49,7 +49,7 @@
 .closeBtn:hover {
   cursor: pointer;
   border-radius: 50%;
-  background-color: rgb(228, 226, 226);
+  background-color: rgb(241, 240, 240);
 }
 
 .image {

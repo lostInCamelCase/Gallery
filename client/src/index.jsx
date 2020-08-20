@@ -42,4 +42,4 @@ const infoState = {
 }
 ]
 }
-ReactDOM.render(<App infoState={infoState}/>, document.getElementById('app'));
+ReactDOM.render(<App infoState={infoState}/>, document.getElementById('gallery'));
