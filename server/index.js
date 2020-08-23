@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const model = require('../db/model.js');
-const random = require('../db/infoGeneration.js');
+const random = require('../db/InfoGeneration.js');
 const app = express();
 const PORT = 3009;
 

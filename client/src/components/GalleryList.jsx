@@ -12,10 +12,10 @@ const GalleryList = ({ pictures, show, handleClose, left, right, idx, showShare,
       <div className={styles.modalMain}>
       <button className={styles.closeBtn} onClick={handleClose}> X Close</button>
       <div className={styles.picIdx}>{idx + 1}/{pictures.length}</div>
-      <div className={styles.share} onClick={showShare}><i className="fas fa-sign-out-alt"></i></div>
-      <div className={styles.heart} onClick={showSave}><i className="far fa-heart"></i></div>
-        <button className={styles.rightBtn} onClick={right}><i className="fa fa-chevron-right" aria-hidden="true"></i></button>
-        <button className={styles.leftBtn} onClick={left}><i className="fa fa-chevron-left" aria-hidden="true"></i></button>
+      <div className={styles.share} onClick={showShare}><i className="fas fa fa-sign-out-alt"></i></div>
+      <div className={styles.heart} onClick={showSave}><i className="far fa fa-heart"></i></div>
+        <button className={styles.rightBtn} onClick={right}><i className="fa fa fa-chevron-right" aria-hidden="true"></i></button>
+        <button className={styles.leftBtn} onClick={left}><i className="fa fa fa-chevron-left" aria-hidden="true"></i></button>
         <br></br>
         <GalleryView image={pictures} handleClose={handleClose} idx={idx}/>
         <div className={styles.caption}> {pictures[idx].caption}</div>

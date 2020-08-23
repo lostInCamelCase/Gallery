@@ -1,5 +1,5 @@
 const db = require('./index.js');
-const random = require('./infoGeneration.js');
+const random = require('./InfoGeneration.js');
 
 const insertInfo = () => {
   for (let i = 1; i < 101; i++) {
